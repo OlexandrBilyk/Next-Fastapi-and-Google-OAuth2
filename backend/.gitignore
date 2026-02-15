@@ -1,0 +1,49 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.mypy_cache/
+.pytest_cache/
+
+# --- Environment & Secrets (КРИТИЧНО) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- FastAPI / Databases ---
+*.db
+*.sqlite3
+*.sqlite
+/static/uploads/
+/media/
+
+# --- Alembic ---
+# Сами миграции игнорить НЕЛЬЗЯ, только кеш
+migrations/__pycache__/
+migrations/versions/__pycache__/
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints
