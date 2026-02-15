@@ -44,6 +44,7 @@ migrations/versions/__pycache__/
 *.swp
 *.swo
 .DS_Store
+alembic.ini
 
 # --- Jupyter Notebooks ---
 .ipynb_checkpoints
