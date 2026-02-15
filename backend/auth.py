@@ -34,10 +34,8 @@ def verify_token(token: str) -> dict:
 
         return payload
     except ExpiredTokenError:
-        print('Токен пройшов')
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "Token expired")
     except DecodeError:
-        print('Токен норм не зчитався')
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "Invalid token")
 
 
@@ -45,7 +43,6 @@ def verify_user(request: Request) -> dict:
     token = request.cookies.get("access_token")
 
     if not token:
-        print('Нема токена')
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Not authenticated")
 
     data = verify_token(token)
